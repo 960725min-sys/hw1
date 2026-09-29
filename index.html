@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>北屯景點介紹｜探索臺中的文化、自然與運動</title>
+<meta name="description" content="北屯一日遊觀光網站：臺中洲際棒球場、大坑風景區、一德洋樓、北屯新村－臺中市眷村文物館。">
+<style>
+:root{
+  --ink:#183f43;--cream:#f7f3e8;--paper:#fffdf8;--green:#4e7a55;
+  --blue:#2879a7;--orange:#d98a27;--red:#b95f4d;--purple:#6d568d;
+  --shadow:0 12px 35px rgba(24,63,67,.12);--radius:24px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;color:#213c3d;background:var(--cream);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.75}
+a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 24px}
+header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e8e0cf}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--ink);font-size:20px}
+.brand-mark{font-size:31px}.brand small{display:block;font-size:11px;font-weight:600;letter-spacing:.12em;color:#668080}
+nav{display:flex;gap:24px;font-size:14px;font-weight:800}nav a:hover{color:var(--orange)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:11px 20px;background:var(--ink);color:white;font-weight:800;cursor:pointer}
+.hero{min-height:620px;display:flex;align-items:flex-end;position:relative;overflow:hidden;background:#244f51}
+.hero-bg{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(15,52,54,.78),rgba(15,52,54,.25)),url("hero.png");background-size:cover;background-position:center}
+.hero-content{position:relative;color:#fff;padding:100px 0 70px;max-width:720px}
+.kicker{display:inline-block;padding:6px 13px;border:1px solid rgba(255,255,255,.55);border-radius:999px;font-size:13px;letter-spacing:.12em}
+h1{font-size:clamp(48px,8vw,88px);line-height:1.05;margin:18px 0 14px;letter-spacing:.02em}
+.hero p{font-size:19px;max-width:600px;color:#f4f4e8}.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.chip{border:1px solid rgba(255,255,255,.6);border-radius:999px;padding:8px 15px;background:rgba(255,255,255,.1)}
+section{padding:78px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}.section-head h2{font-size:36px;margin:0;color:var(--ink)}.section-head p{margin:0;color:#637273}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.stop{background:var(--paper);padding:22px 14px;border-radius:20px;box-shadow:var(--shadow);text-align:center;border-top:5px solid var(--blue)}
+.stop:nth-child(2){border-color:var(--orange)}.stop:nth-child(3){border-color:var(--green)}.stop:nth-child(4){border-color:var(--red)}.stop:nth-child(5){border-color:var(--purple)}
+.time{font-size:14px;font-weight:900;color:var(--orange)}.icon{font-size:34px;margin:7px 0}.stop h3{font-size:17px;margin:4px 0}.stop p{font-size:13px;color:#667}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.card{background:var(--paper);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.card-img{height:190px;display:grid;place-items:center;color:white;font-size:58px;font-weight:900;position:relative}
+.c1{background:linear-gradient(135deg,#2378a5,#123e59)}.c2{background:linear-gradient(135deg,#6b985d,#214f37)}.c3{background:linear-gradient(135deg,#c47a57,#6f342d)}.c4{background:linear-gradient(135deg,#76619c,#35284e)}
+.card-img span{position:absolute;left:15px;top:15px;background:rgba(0,0,0,.3);border-radius:999px;padding:4px 10px;font-size:12px}
+.card-body{padding:22px;display:flex;flex-direction:column;height:100%}.card h3{margin:0;color:var(--ink);font-size:21px}.tag{color:var(--green);font-size:13px;font-weight:900;margin:4px 0 12px}.card p{font-size:14px;color:#607071}.facts{font-size:13px;color:#596b6b;margin:10px 0 18px}.card .btn{margin-top:auto;align-self:flex-start}
+.food{background:#fff9e8;border-radius:30px;padding:32px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;box-shadow:var(--shadow)}
+.food h2{margin-top:0;color:#8a5424}.food ul{padding-left:20px}.food-note{background:white;border-radius:20px;padding:24px;border:1px dashed #d6bb86}
+.mapbox{background:linear-gradient(135deg,#e7efe6,#dfe8ed);border-radius:30px;min-height:290px;display:grid;place-items:center;text-align:center;box-shadow:var(--shadow);padding:30px}
+.mapbox .route{font-size:34px;letter-spacing:.18em;color:var(--ink);margin:18px 0}
+.cta{background:var(--ink);color:white;border-radius:32px;padding:45px;text-align:center}.cta h2{font-size:34px;margin:0 0 10px}.cta p{color:#dce8e4}.cta .btn{background:#f3c15c;color:#193c3e}
+footer{background:#14383b;color:#d9e8e5;padding:35px 0;margin-top:70px}.footer{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer small{opacity:.75}
+@media(max-width:900px){nav{display:none}.timeline{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr 1fr}.food{grid-template-columns:1fr}}
+@media(max-width:580px){.wrap{padding:0 16px}.hero{min-height:560px}.hero-content{padding:90px 0 48px}section{padding:58px 0}.timeline,.cards{grid-template-columns:1fr}.section-head{display:block}.section-head h2{font-size:30px}.food,.cta{padding:25px}.footer{display:block}}
+
+.card-photo{height:230px;position:relative;overflow:hidden;background:#dfe8e5}
+.card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.card:hover .card-photo img{transform:scale(1.05)}
+.card-photo .photo-number{position:absolute;left:15px;top:15px;background:rgba(0,0,0,.48);color:#fff;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:900}
+.card-photo .photo-label{position:absolute;right:15px;bottom:15px;background:rgba(255,253,248,.92);color:var(--ink);border-radius:999px;padding:5px 11px;font-size:12px;font-weight:900}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="brand-mark">△</span><span>北屯景點介紹<small>探索臺中的文化・自然與運動</small></span></a>
+    <nav>
+      <a href="#spots">景點介紹</a><a href="#spots">景點介紹</a><a href="#food">美食推薦</a><a href="#transport">交通資訊</a>
+    </nav>
+    <a class="btn" href="#spots">探索景點</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-content">
+    <span class="kicker">TAICHUNG · BEITUN ATTRACTIONS</span>
+    <h1>北屯景點介紹</h1>
+    <p>從棒球運動、山林自然，到老屋與眷村文化，認識北屯豐富多元的景點特色。</p>
+    <div class="chips"><span class="chip">⚾ 運動</span><span class="chip">🌿 自然</span><span class="chip">🏛️ 歷史</span><span class="chip">🏠 眷村文化</span></div>
+  </div>
+</section>
+
+<section id="overview">
+<div class="wrap">
+  <div class="section-head"><div><h2>北屯景點</h2><p>四大特色景點，搭配實景照片，讓你先看景色、再認識地方故事。</p></div></div>
+  <div class="timeline">
+    <div class="stop"><div class="time">運動文化</div><div class="icon">⚾</div><h3>臺中洲際棒球場</h3><p>感受臺中棒球運動文化</p></div>
+    <div class="stop"><div class="time">在地生活</div><div class="icon">🍜</div><h3>在地美食</h3><p>感受北屯日常飲食文化</p></div>
+    <div class="stop"><div class="time">自然景觀</div><div class="icon">🌳</div><h3>大坑風景區</h3><p>享受自然景觀與山林步道</p></div>
+    <div class="stop"><div class="time">歷史建築</div><div class="icon">🏛️</div><h3>一德洋樓</h3><p>認識歷史建築與地方文化</p></div>
+    <div class="stop"><div class="time">眷村文化</div><div class="icon">🏠</div><h3>北屯新村</h3><p>探索眷村生活與歷史記憶</p></div>
+  </div>
+</div>
+</section>
+
+<section id="spots" style="background:#fffdf8">
+<div class="wrap">
+  <div class="section-head"><div><h2>景點介紹</h2><p>四個景點，四種北屯風景。</p></div></div>
+  <div class="cards">
+    <article class="card"><div class="card-photo"><img src="https://s.yimg.com/ny/api/res/1.2/CQ8l.mFyNK.uFl2ZUKnm0w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https%3A/media.zenfs.com/ko/scoop_tw_461/110a2cc9443cc0b187b71adeac386667" alt="運動文化景點照片" loading="lazy"><span class="photo-number">01</span><span class="photo-label">運動文化</span></div><div class="card-body"><h3>臺中洲際棒球場</h3><div class="tag">運動 × 城市活力</div><p>以棒球場為旅程起點，感受臺中的運動文化與大型場館氛圍。</p><div class="facts">📍 北屯區崇德路三段835號</div><a class="btn" href="https://www.google.com/maps/search/?api=1&query=臺中洲際棒球場" target="_blank">查看地圖 →</a></div></article>
+    <article class="card"><div class="card-photo"><img src="https://travel.taichung.gov.tw/image/31573?r=637837893159886666" alt="自然景觀景點照片" loading="lazy"><span class="photo-number">02</span><span class="photo-label">自然景觀</span></div><div class="card-body"><h3>大坑風景區</h3><div class="tag">自然 × 山林</div><p>北屯重要的自然休閒區域，可依體力選擇適合自己的步道與活動。</p><div class="facts">📍 臺中市北屯區大坑一帶</div><a class="btn" href="https://www.google.com/maps/search/?api=1&query=大坑風景區" target="_blank">查看地圖 →</a></div></article>
+    <article class="card"><div class="card-photo"><img src="https://museums.moc.gov.tw/Upload/FrontPhoto/4821c14f-7cab-43f1-9f5d-9bfd9c7a6204.jpg" alt="歷史建築景點照片" loading="lazy"><span class="photo-number">03</span><span class="photo-label">歷史建築</span></div><div class="card-body"><h3>一德洋樓（林懋陽故居）</h3><div class="tag">老屋 × 歷史</div><p>走進具有時代特色的歷史建築，從建築與空間認識北屯地方故事。</p><div class="facts">📍 臺中市北屯區長安路一段101號</div><a class="btn" href="https://www.google.com/maps/search/?api=1&query=一德洋樓%20林懋陽故居" target="_blank">查看地圖 →</a></div></article>
+    <article class="card"><div class="card-photo"><img src="https://yuki.tw/wp-content/uploads/2022/10/20221003174315_1.jpg" alt="眷村文化景點照片" loading="lazy"><span class="photo-number">04</span><span class="photo-label">眷村文化</span></div><div class="card-body"><h3>北屯新村－臺中市眷村文物館</h3><div class="tag">眷村 × 人情味</div><p>透過眷村建築與展示內容，認識地方生活記憶與時代變遷。</p><div class="facts">📍 臺中市北屯區天祥街19號</div><a class="btn" href="https://www.google.com/maps/search/?api=1&query=北屯新村%20臺中市眷村文物館" target="_blank">查看地圖 →</a></div></article>
+  </div>
+</div>
+</section>
+
+<section id="food">
+<div class="wrap">
+ <div class="food">
+  <div><h2>🍜 美食推薦</h2><p>行程中安排一段在地午餐時間，讓旅程不只有景點，也有北屯的日常味道。</p>
+   <ul><li>北屯在地小吃：麵食、滷味等</li><li>東山路周邊：可依當日營業狀況挑選餐飲</li><li>建議預留約 60–90 分鐘用餐</li></ul>
+  </div>
+  <div class="food-note"><strong>小提醒</strong><p>店家營業時間可能變動，出發前建議再次確認。若是戶外行程，也可準備飲水、防曬與舒適鞋款。</p></div>
+ </div>
+</div>
+</section>
+
+<section id="transport">
+<div class="wrap">
+ <div class="section-head"><div><h2>交通資訊</h2><p>四個景點分布在北屯不同區域，可依興趣安排參觀順序與交通方式。</p></div></div>
+ <div class="mapbox">
+   <div><div style="font-size:54px">🗺️</div><strong>北屯景點分布</strong><div class="route">⚾　🌳　🏛️　🏠</div><p>點擊各景點卡片的「查看地圖」，即可開啟 Google Maps 導航。</p></div>
+ </div>
+</div>
+</section>
+
+<section>
+<div class="wrap"><div class="cta"><h2>準備好了，就出發吧！</h2><p>從運動走進山林，再走進北屯的歷史與人情。</p><a class="btn" href="#trip">返回景點介紹 ↑</a></div></div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap footer"><div><strong>△ 北屯景點介紹</strong><br><small>探索臺中的文化・自然與運動</small></div><small>© 2026 北屯景點介紹｜觀光網站示範</small></div>
+</footer>
+</body>
+</html>
